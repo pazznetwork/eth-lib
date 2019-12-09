@@ -3,7 +3,9 @@ const Nat = require("./nat");
 const elliptic = require("elliptic");
 const rlp = require("./rlp");
 const secp256k1 = new (elliptic.ec)("secp256k1"); // eslint-disable-line
-const {keccak256, keccak256s} = require("./hash");
+const hashLib = require("./hash");
+const keccak256 = hashLib.keccak256;
+const keccak256s = hashLib.keccak256s;
 
 const create = entropy => {
   const innerHex = keccak256(Bytes.concat(Bytes.random(32), entropy || Bytes.random(32)));
@@ -37,7 +39,7 @@ const fromPrivate = privateKey => {
 const encodeSignature = ([v, r, s]) =>
   Bytes.flatten([r,s,v]);
 
-const decodeSignature = (hex) => [ 
+const decodeSignature = (hex) => [
   Bytes.slice(64, Bytes.length(hex), hex),
   Bytes.slice(0, 32, hex),
   Bytes.slice(32, 64, hex)];
@@ -64,7 +66,7 @@ const recover = (hash, signature) => {
   return address;
 }
 
-module.exports = { 
+module.exports = {
   create,
   toChecksum,
   fromPrivate,
