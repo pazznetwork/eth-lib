@@ -1,6 +1,6 @@
 {
   "name": "eth-lib",
-  "version": "0.2.8",
+  "version": "0.2.8-b1",
   "description": "Lightweight Ethereum libraries",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maiavictor/eth-lib.git"
+    "url": "git+https://github.com/pazznetwork/eth-lib.git"
   },
   "keywords": [
     "ethereum"
@@ -17,9 +17,9 @@
   "author": "Victor Maia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maiavictor/eth-lib/issues"
+    "url": "https://github.com/pazznetwork/eth-lib/issues"
   },
-  "homepage": "https://github.com/maiavictor/eth-lib#readme",
+  "homepage": "https://github.com/pazznetwork/eth-lib#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
