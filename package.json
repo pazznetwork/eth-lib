@@ -1,10 +1,10 @@
 {
   "name": "eth-lib",
-  "version": "0.2.8-b2",
+  "version": "0.2.8-b3",
   "description": "Lightweight Ethereum libraries",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir=lib",
+    "build": "NODE_ENV=es5 babel src --out-dir=lib",
     "test": "mocha test/test.js"
   },
   "repository": {
